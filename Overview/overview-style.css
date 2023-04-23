@@ -1,0 +1,500 @@
+/* NOTES
+
+Color
+    Gold #ffd700
+    White #f5f5f7
+    Black #1d1d1f
+    Gray #484848
+
+    Shadow #1d1d1fa0
+    White Shadow #f5f5f7b4
+
+Text Padding
+    25-30rem
+
+Fonts
+    Descriptions - OpenSans
+    Titles - Montserrat
+    
+*/
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@font-face {
+    font-family: mon;
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: opens;
+    src: url(../fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+body{
+    background-color: #f5f5f7;
+    position: relative;
+    font-family: opens;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+/* OVERALL */
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+/* NAVIGATION */
+
+.navsec-main{
+    width: 100%;
+    height: 60rem;
+
+    background-size: cover;
+    background-position: center;
+
+    animation-name: navsec-background;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+    @keyframes navsec-background{
+        0%{background-image: url(Images/Navigation/over-nav-image-one.webp);
+        }
+        20%{background-image: url(Images/Navigation/over-nav-image-two.webp);
+        }
+        40%{background-image: url(Images/Navigation/over-nav-image-three.webp);
+        }
+        60%{background-image: url(Images/Navigation/over-nav-image-four.webp);
+        }
+        80%{background-image: url(Images/Navigation/over-nav-image-five.webp);
+        }
+        100%{background-image: url(Images/Navigation/over-nav-image-one.webp);
+        }
+    }
+
+.navsec-upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+
+    font-family: mon;
+}
+
+    .navsec-company{
+        display: flex;
+        flex-direction: column;
+
+        font-size: 2rem;
+    }
+
+        .navsec-company span{
+            color: #f5f5f7;
+            font-weight: bold;
+        }
+
+    .navsec-nav{
+        display: flex;
+        gap: 2rem;
+
+        list-style: none;
+    }
+
+        .navsec-nav li a{
+            color: #f5f5f7;
+            text-decoration: none;
+        }
+
+.navsec-social{
+    width: 100%;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+
+    position: absolute;
+    top: 56.5rem;
+}
+
+    .navsec-social li{
+        width: 2.5rem;
+        height: 2.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #f5f5f7b4;
+        border-radius: 2rem;
+
+        opacity: 50%;
+    }
+
+    .navsec-social li a{
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: #f5f5f7;
+    }
+
+.navsec-nav li, .navsec-social li{
+    transition: all 0.2s;
+}
+
+.navsec-nav li:hover, .navsec-social li:hover{
+    transform: scale(1.1);
+    opacity: 80%;
+}
+
+.navsec-nav-current a{
+    border-bottom: solid 0.15rem;
+}
+
+
+
+
+
+
+
+
+
+/* MESSAGE */
+
+.messec-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    padding: 5rem 0;
+}
+
+.messec-line-main{
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+    .messec-line-main div{
+        width: 25rem;
+    }
+
+    .messec-line-main div span{
+        font-size: 2rem;
+        font-family: mon;
+    }
+
+    .messec-line-main div p{
+        padding-top: 2rem;
+    }
+
+
+
+
+
+
+
+
+
+/* IMAGE DISPLAY */
+
+.dissec-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+    .dissec-main div{
+        display: flex;
+    }
+
+    .dissec-main div img{
+        width: 20rem;
+        height: 20rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/* INTERESTED */
+
+.intsec-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem 0;
+    gap: 1.5rem;
+
+    background-image: url(Images/Interested/interested-inte-image-one.webp);
+    background-position: center;
+    background-size: cover;
+}
+
+    .intsec-main span{
+        padding-bottom: 1rem;
+
+        font-size: 2.5rem;
+        font-family: mon;
+        font-weight: 500;
+        color: #f5f5f7;
+    }
+
+    .intsec-main .intsec-name{
+        width: 35rem;
+        height: 3rem;
+        padding: 0 1rem;
+        font-family: mon;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    .intsec-main div{
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .intsec-main div input{
+        width: 16.7rem;
+        height: 3rem;
+        padding: 0 1rem;
+        font-family: mon;
+        outline: none;
+        border: none;
+        border-radius: 0.5rem;
+    }
+
+    .intsec-main textarea{
+        width: 35rem;
+        height: 10rem;
+        padding: 1rem 1rem;
+        font-family: mon;
+        outline: none;
+        border: none;
+        resize: none;
+        border-radius: 0.5rem;
+    }
+
+    .intsec-main button{
+        padding: 0.8rem 3rem;
+        border-radius: 0.5rem;
+        border: none;
+        transition: all 0.2s;
+    }
+
+    .intsec-main a{
+        text-decoration: none;
+        color: #1d1d1f;
+        font-family: mon;
+        font-weight: 500;
+    }
+
+
+
+
+
+
+
+
+
+
+/* FOOTER */
+
+.footsec-main{
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 0.1rem #f5f5f7;
+
+    background-color: #ebebeb;
+}
+
+.footsec-contact{
+    width: 20rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .footsec-contact h1{
+        font-size: 1.5rem;
+    }
+
+    .footsec-contact span{
+        font-size: 2rem;
+        padding-top: 0.7rem;
+    }
+
+.footsec-location{
+    width: 25rem;
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    border-right: solid 0.1rem #1d1d1f;
+    border-left: solid 0.1rem #1d1d1f;
+}
+
+    .footsec-location h1{
+        font-size: 1.5rem;
+    }
+
+    .footsec-location span{
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .footsec-location button{
+        border: none;
+        transition: all 0.2s;
+    }
+
+    .footsec-location a{
+        font-size: 0.9rem;
+        font-weight: bold;
+        color: #1d1d1f;
+    }
+
+.footsec-social{
+    width: 20rem;
+    height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .footsec-social ul{
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        gap: 1rem;
+    }
+
+    .footsec-social li{
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #1d1d1f;
+        border-radius: 1rem;
+        transition: all 0.2s;
+    }
+
+    .footsec-social a{
+        font-size: 1.1rem;
+        color: #f5f5f7;
+    }
+
+    .footsec-social ul li:hover{
+        transition: all 0.2s;
+        transform: scale(1.1);
+    }
+
+
+
+
+
+
+
+
+/* COPYRIGHT */
+
+.copsec-main{
+    display: flex;
+    justify-content: center;
+    background-color: #ebebeb;
+}
+
+.copsec-main div{
+    width: 30rem;
+}
+
+    .copsec-right{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .copsec-right{
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #1d1d1f;
+        opacity: 50%;
+    }
+
+    .copsec-link{
+        height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .copsec-link span, .copsec-link a{
+        color: #1d1d1f;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-decoration: none;
+        transition: all 0.2s;
+    }
+
+    .copsec-link h1{
+        color: #1d1d1f;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .copsec-link span:hover{
+        transition: all 0.2s;
+        transform: scale(1.1);
+    }
